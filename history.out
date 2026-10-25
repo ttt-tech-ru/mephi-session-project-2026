@@ -1,0 +1,58 @@
+    1  sudo [200~hostnamectl set-hostname mephi-2026.domain.local~
+    2  sudo hostnamectl set-hostname mephi-2026.domain.local
+    3  clear
+    4  sudo hostnamectl set-hostname mephi-2026.domain.local
+    5  ping -c 4 8.8.8. > ~/ping.out
+    6  ping -c 4 8.8.8.8 > ~/ping.out
+    7  cat ~/ping.out
+    8  sudo dnf -y update
+    9  sudo dnf -y inta;; nginx libcap-ng-utils
+   10  sudo dnf -y install nginx libcap-ng-utils
+   11  sudo dnf download tcpdump --destdir /tmp
+   12  ls /tmp/tcpdump*.rpm
+   13  sudo  rpm -ivh /tmp/tcpdump*.rpm
+   14  rpm -q tcpdump
+   15  sudo rpm -Uvh --replacepkgs /tmp/tcpdump*.rpm
+   16  ls /tmp/tcpdump*.prm
+   17  ls /tmp/tcpdump*.rpm
+   18  rm /tmp/tcpdump*.i686.rpm
+   19  sudo rm /tmp/tcpdump*.i686.rpm
+   20  sudo rpm -Uvh --replacepkgs /tmp/tcpdump*.x86_64.rpm
+   21  rpm -q tcpdump
+   22  sudo dnf history > ~/dnf.out
+   23  wc -l /.bash_history
+   24  wc -l ~/.bash_history
+   25  tail -50 ~/.bash_history
+   26  echo "Hello from Student: RudeevN" | sudo tee /mephi-web/index.html
+   27  sudo mkdir -p /mephi-web
+   28  sudo semanage fcontext -a -t httpd_sys_content_t "/mephi-web(/.*)?"
+   29  sudo restorecon -Rv /mephi-web
+   30  sudo chmod 755 /mephi-web
+   31  ls -ldZ /mephi-web
+   32  grep -n "root " /etc/nginx/nginx.conf
+   33  sudo nginx -t
+   34  sudo systemctl restart nginx
+   35  echo "Hello from Student: Rudeev Nikolai" | sudo tee /mephi-web/index.html
+   36  sudo restorecon -v /mephi-web/index.html
+   37  curl http://localhost/
+   38  ping -c 4 8.8.8.8 > ~/ping.out
+   39  stat /data/mephi-2026 > ~/stat.out
+   40  stat /mephi-web >> ~/stat.out
+   41  getcap /usr/sbin/tcpdump > ~/getcap.out
+   42  sudo dnf history > ~/dnf.out
+   43  journalctl -u nginx -b > ~/journalctl.out
+   44  getenforce > ~/getenforce.out
+   45  curl http://localhost/ > ~/curl.out
+   46  getenforce
+   47  journalctl -u nginx -b
+   48  mkdir ~/mephi-session-project-2026
+   49  cd ~/mephi-session-project-2026
+   50  cp ~/ping.out ~/stat.out ~/getcap.out ~/dnf.out ~/journalctl.out ~/getenforce.out ~curl.out
+   51  cp ~/ping.out ~/stat.out ~/getcap.out ~/dnf.out ~/journalctl.out ~/getenforce.out ~/curl.out
+   52  cp ~/ping.out ~/stat.out ~/getcap.out ~/dnf.out ~/journalctl.out ~/getenforce.out ~/curl.out .
+   53  sudo cp /etc/fstab /etc/passwd /etc/shadow /etc/group/ /etc/security/pwquality.conf .
+   54  sudo cp /etc/fstab /etc/passwd /etc/shadow /etc/group /etc/security/pwquality.conf .
+   55  sudo chown nrudeev:nrudeev *
+   56  cp /tmp/tcpdump*.x86_64.rpm
+   57  cp /tmp/tcpdump*.x86_64.rpm .
+   58  history > ~/history.out
